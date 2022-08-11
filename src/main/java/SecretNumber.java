@@ -23,18 +23,24 @@ public class SecretNumber {
 //      convert the stored value of guessNumber into an int from String
 
         int guessNumberInt = Integer.parseInt(guessNumberString);
-        System.out.println(guessNumberInt);
+
 
 //        check to see if the input number is equal to secret number
 //        if number guessed is equal to secret number, tell user the guess is correct
+//        if the number guessed is not equal to secret number, tell user whether it is bigger or smaller
 
-        
         if (guessNumberInt == secretNumber) {
             System.out.println("You have guessed what the secret number is! it is " + secretNumber);
+        } else if ( guessNumberInt > secretNumber ){
+            System.out.println("Incorrect, the secret number is less than " + guessNumberInt);
+        } else if ( guessNumberInt < secretNumber ) {
+            System.out.println("Incorrect, the secret number is greater than " + guessNumberInt);
+
         }
 
 
-//        if the number guessed is not equal to secret number, tell user whether it is bigger or smaller
+
+
 
 //      Quick test code
 //      System.out.println(guessNumber);
