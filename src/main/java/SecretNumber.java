@@ -16,18 +16,29 @@ public class SecretNumber {
 //        collect user input
 
         Scanner reader = new Scanner(System.in); // create scanner object
-        String guessNumber = reader.nextLine();
+        String guessNumberString = reader.nextLine();
 
 
 
-//      convert the stored value of guessNumber into an int not String
+//      convert the stored value of guessNumber into an int from String
+
+        int guessNumberInt = Integer.parseInt(guessNumberString);
+        System.out.println(guessNumberInt);
+
 //        check to see if the input number is equal to secret number
 //        if number guessed is equal to secret number, tell user the guess is correct
+
+        
+        if (guessNumberInt == secretNumber) {
+            System.out.println("You have guessed what the secret number is! it is " + secretNumber);
+        }
+
+
 //        if the number guessed is not equal to secret number, tell user whether it is bigger or smaller
 
 //      Quick test code
-        System.out.println(guessNumber);
-        System.out.println(secretNumber);
+//      System.out.println(guessNumber);
+//        System.out.println(secretNumber);
     }
 
 }
